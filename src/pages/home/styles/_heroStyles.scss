@@ -1,0 +1,46 @@
+.sliderContainer {
+  border: 2px solid black;
+  color: white;
+  height: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      //opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+      background: url("../../../images/ghana/_aduanaEmblem.jpg") no-repeat center top/cover;
+
+      .content {
+        position: absolute;
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        background-color: rgba(229, 235, 243, 0.8);
+        color: #495b73;
+        padding: 1rem;
+        line-height: 1.3;
+
+        h1 {
+          margin-bottom: 0.625rem;
+          color: #362a2b;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
