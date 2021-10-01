@@ -1,20 +1,15 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { About } from './components'
-
-import Layout from './pages/layout/Layout'
-import { Heritage } from './components/heritage'
+import { Carousel } from './pages'
+import ExampleApp from './pages/Carousel/ExampleApp'
+import {Home} from "./pages/home";
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      {/*<div className="container">*/}
       <Switch>
-        {/*<Route path="/path" component={Layout} exact />*/}
-        {/*<Route path="/about" component={About} exact />*/}
-        <Route path="/" component={Heritage} />
+        <Route path="/" component={Home} />
       </Switch>
-      {/*</div>*/}
     </BrowserRouter>
   )
 }

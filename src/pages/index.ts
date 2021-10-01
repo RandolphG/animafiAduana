@@ -1,1 +1,1 @@
-export { default as Hero } from './home/Hero'
+export { Carousel } from './Carousel'
