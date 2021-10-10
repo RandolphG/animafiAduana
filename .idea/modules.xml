@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/new-animafi-aduana.iml" filepath="$PROJECT_DIR$/.idea/new-animafi-aduana.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/react-redux-observables-typescript.iml" filepath="$PROJECT_DIR$/.idea/react-redux-observables-typescript.iml" />
     </modules>
   </component>
 </project>

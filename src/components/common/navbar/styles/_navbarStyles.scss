@@ -1,0 +1,93 @@
+.container {
+  color: white;
+  overflow: hidden;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding-bottom: 20px;
+  z-index: 1000;
+
+  @media screen and (max-width: 1200px) {
+    left: 9px;
+    z-index: 1000;
+  }
+}
+
+.snake {
+  position: absolute;
+  transition: transform 500ms;
+  width: 270px;
+  transform: translateY(-50%);
+  top: 60%;
+  padding-left: 8px;
+}
+
+.snake path {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 23 100;
+  stroke-width: 1.8px;
+}
+
+.pos1 .snake {
+  transform: translateX(31.33%) translateY(-50%);
+}
+
+.pos2 .snake {
+  transform: translateX(63.67%) translateY(-50%);
+}
+
+.pos3 .snake {
+  transform: translateX(97.67%) translateY(-50%);
+}
+
+.pos4 .snake {
+  transform: translateX(128.67%) translateY(-50%);
+}
+
+.pos5 .snake {
+  transform: translateX(160.67%) translateY(-50%);
+}
+
+.pos6 .snake {
+  transform: translateX(193.50%) translateY(-50%);
+}
+
+.left .snake path {
+  stroke-dashoffset: 0;
+  transform: translateX(0);
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+}
+
+.right .snake path {
+  stroke-dashoffset: -70px;
+  transform: translateX(-60%);
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+}
+
+.instant .snake path {
+  transition: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  width: 615px;
+  height: 100px;
+  left: 9px;
+  position: relative;
+  padding-right: .5rem;
+}
+
+.item {
+  font-size: 1.2rem;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+
+  &:hover {
+    color: gold;
+  }
+}
