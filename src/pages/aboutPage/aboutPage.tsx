@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import $ from "jquery";
 import _ from "lodash";
-import "./styles/_aboutPageStyles.scss";
 import { ScrollDownArrow } from "../../components";
+import { statements } from "./utils";
+import "./styles/_aboutPageStyles.scss";
 
 const AboutPage = () => {
   let scrollSensitivitySetting: number = 30; //Increase/decrease this number to change sensitivity to trackpad gestures (up = less sensitive; down = more sensitive)
@@ -100,51 +101,14 @@ const AboutPage = () => {
           </p>
         </div>
       </section>
-      <section className="background">
-        <div className="content-wrapper">
-          <p className="content-title">MISSION STATEMENT</p>
-          <p className="content-mission-statement">
-            The primary mission of our association is to help the rehabilitation
-            and sustainable development of Animafi Aduana people of Obo Kwahu in
-            Ghana. Therefore, we strive to fund and create innovative,
-            collaborative solutions for the urgently needed services and
-            restoration of facilities for the underprivileged people.
-          </p>
-        </div>
-      </section>
-      <section className="background">
-        <div className="content-wrapper">
-          <p className="content-mission-statement">
-            The Animafi Aduana Development Association has a diverse range of
-            backgrounds and skill sets, but we share a common passion for
-            improving the life conditions of the underprivileged people.
-            Encouraging them to continue to live in their own communities. We
-            work hard to accomplish our mission.
-          </p>
-        </div>
-      </section>
-      <section className="background">
-        <div className="content-wrapper">
-          <p className="content-mission-statement">
-            We believe a fearless approach is what is needed to address the
-            objectives at hand. Taking such an approach enables us to make
-            transformative changes. We believe real impact can be made when we
-            rely on our strong foundation to guide our activities and
-            collaborations as we work to uncover new, more impactful ways of
-            addressing chronic social challenges.
-          </p>
-        </div>
-      </section>
-      <section className="background">
-        <div className="content-wrapper">
-          <p className="content-mission-statement">
-            Animafi Aduana Development Association is a non-profit organization
-            established in order to reconnect Animafi Aduana communities living
-            abroad. As we grow as an organization we will strive to improve the
-            life conditions of the Animafi Aduana people of Obo Kwahu Ghana.{" "}
-          </p>
-        </div>
-      </section>
+      {statements.map(({ title, text }, idx) => (
+        <section key={idx} className="background">
+          <div className="content-wrapper">
+            {title && <p className="content-title">{title}</p>}
+            <p className="content-mission-statement">{text}</p>
+          </div>
+        </section>
+      ))}
     </div>
   );
 };

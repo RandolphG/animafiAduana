@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AUTOCHANGE_TIME, slides } from "./utils";
 import classNames from "classnames";
 import "./styles/_frontPageStyles.scss";
+import { motion } from "framer-motion";
 
 interface ISlideState {
   activeSlide: number;
@@ -97,8 +98,23 @@ const FrontPage: React.FC = () => {
     </div>
   );
 
+  const motionSettings = {
+    initial: { opacity: 0, scale: 0, y: -25 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+    exit: { opacity: 0, y: -25 },
+  };
+
   return (
-    <div
+    <motion.div
+      {...motionSettings}
       className={classNames("slider", { "s--ready": slideState.sliderReady })}
     >
       <p className="slider__top-heading">
@@ -123,8 +139,7 @@ const FrontPage: React.FC = () => {
         className="slider__control slider__control--right"
         onClick={() => changeSlides(1)}
       />
-      {/*<Ticker />*/}
-    </div>
+    </motion.div>
   );
 };
 

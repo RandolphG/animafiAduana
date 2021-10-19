@@ -1,0 +1,13 @@
+Animated Download Icon : https://codepen.io/Zaku/pen/wvMVmKm
+
+Full Page Parallax Scroll Effect : https://codepen.io/eehayman/pen/qdGZJr
+
+MOTION BLUR MOUSE CURSOR : https://codepen.io/igcorreia/pen/pJvOpL
+
+FAMILTY TREE : 
+
+	★ Familia : https://codepen.io/ancara/pen/yGaOQd
+	
+	★ Family Tree : https://codepen.io/aarati/details/bdyVEP
+	
+	★ Simpson Family Tree : https://codepen.io/zingchart/details/bzeRWW

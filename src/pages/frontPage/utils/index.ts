@@ -1,87 +1,91 @@
+import { images } from "../../../assets/";
+
+type slides = { city: string; country: string; img: any }[];
+
 /* timeout in milliseconds */
 export const AUTOCHANGE_TIME: number = 4000;
 
 /* image slides */
-export const slides: any = [
+export const slides: slides = [
   {
     city: "Image01",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image13.jpeg?raw=true",
+    country: "Info",
+    img: images.image01,
   },
   {
     city: "Image02",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets//_image_02.jpeg?raw=true",
+    country: "Info",
+    img: images.image02,
   },
   {
     city: "Image03",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets//_image_01.jpeg?raw=true",
+    country: "Info",
+    img: images.image03,
   },
   {
     city: "Image04",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image01.jpeg?raw=true",
+    country: "Info",
+    img: images.image04,
   },
   {
     city: "Image05",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image12.jpeg?raw=true",
+    country: "Info",
+    img: images.image05,
   },
   {
     city: "Image06",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image07.jpeg?raw=true",
+    country: "Info",
+    img: images.image06,
   },
   {
     city: "Image07",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image02.jpeg?raw=true",
+    country: "Info",
+    img: images.image07,
   },
   {
     city: "Image08",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image08.jpeg?raw=true",
+    country: "Info",
+    img: images.image08,
   },
   {
     city: "Image09",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image09.jpeg?raw=true",
+    country: "Info",
+    img: images.image09,
   },
   {
     city: "Image10",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image04.jpeg?raw=true",
+    country: "Info",
+    img: images.image10,
   },
   {
     city: "Image11",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image11.jpeg?raw=true",
+    country: "Info",
+    img: images.image11,
   },
   {
     city: "Image12",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image05.jpeg?raw=true",
+    country: "Info",
+    img: images.image12,
   },
   {
     city: "Image13",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image10.jpeg?raw=true",
+    country: "Info",
+    img: images.image13,
   },
 
   {
     city: "Image14",
-    country: "Ghana",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image14.jpeg?raw=true",
+    country: "Info",
+    img: images.image14,
   },
   {
     city: "Image15",
-    country: "Ghana",
+    country: "Info",
     img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image03.jpeg?raw=true",
   },
   {
     city: "Image16",
-    country: "Ghana",
+    country: "Info",
     img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_slideShowImages/_logoEmblem_edit.png?raw=true",
   },
 ];

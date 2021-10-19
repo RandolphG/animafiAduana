@@ -1,19 +1,19 @@
 Heroku setup:
--> heroku create [name of applicaion]
+-> heroku create [name of application]
 -> heroku git:remote -a [name of application]
 
 search buildpacks:
 -> heroku buildpacks:search [name of buildpack]
 
--> heroku buildpacks:add [name of buildpacks]
+-> heroku buildpacks:add [name of buildpack]
 	zidizei/typescript
 	heroku/nodejs
-	
+
 build project
 -> add & commit changes
 -> git push heroku master
 
-https://game-poplogics.herokuapp.com/
+https://animafiaduanaorg.herokuapp.com/
 
 Deploying React Node TypeScript App On Heroku with Github Integration:
 https://funnelgarden.com/deploying-react-node-typescript-heroku-github/#Deployment_Gotchas
