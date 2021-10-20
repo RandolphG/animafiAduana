@@ -1,13 +1,16 @@
-import React, { FC } from "react";
-import "./styles/_expandableSidebarNavigationStyles.scss";
+import React, { FC, useRef } from "react";
 import { ExpandableSidebarNavigationViewModel } from "./expandableSidebarNavigationViewModel";
+import "./styles/_expandableSidebarNavigationStyles.scss";
 
 /**
  * Expandable Sidebar Navigation
  * @constructor
  */
 const ExpandableSidebarNavigation: FC = () => {
-  ExpandableSidebarNavigationViewModel();
+  const triggerRef = useRef(null);
+  const navigationContainerRef = useRef(null);
+
+  ExpandableSidebarNavigationViewModel({ triggerRef, navigationContainerRef });
 
   const sidebarLinks = [
     {
@@ -116,7 +119,7 @@ const ExpandableSidebarNavigation: FC = () => {
   ];
 
   const Trigger = () => (
-    <div className="navigation-collapse-trigger">
+    <div ref={triggerRef} className="navigation-collapse-trigger">
       <span
         className="navigation-collapse-trigger__orb"
         id="js_navigation-collapse-trigger"
@@ -138,11 +141,21 @@ const ExpandableSidebarNavigation: FC = () => {
     </div>
   );
 
+  const NavigationContainer = ({ children }: any) => (
+    <div
+      ref={navigationContainerRef}
+      className="navigation-container"
+      id="js_navigation-container"
+    >
+      {children}
+    </div>
+  );
+
   const Navigation = () => (
     <nav role="navigation">
       <ul className="navigationLinks">
         {sidebarLinks.map(({ svg, title }, idx) => (
-          <li>
+          <li key={idx}>
             <a className="navigation-link" href="#">
               {svg}
               <span className="navigation-link__name js_navigation-item-name">
@@ -226,7 +239,7 @@ const ExpandableSidebarNavigation: FC = () => {
 
   return (
     <div className="expandableSidebarNavigation">
-      <div className="navigation-container" id="js_navigation-container">
+      <NavigationContainer>
         <Trigger />
         <div className="navigation">
           <Header />
@@ -234,7 +247,7 @@ const ExpandableSidebarNavigation: FC = () => {
           <Navigation />
           <Logout />
         </div>
-      </div>
+      </NavigationContainer>
     </div>
   );
 };
