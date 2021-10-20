@@ -1,66 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./styles/_navbarStyles.scss";
-import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
+import { NavbarViewModel } from "./navbarViewModel";
 
 /**
  * Navbar
  * @constructor
  */
 const Navbar = () => {
-  let reflow: any = null;
-  let historyApp = useHistory();
-
-  function goToLink(link: any) {
-    historyApp.push(`/${link}`);
-  }
-
-  useEffect(() => {
-    const container: Element | null = document.querySelector(".container");
-    const items = document.querySelectorAll(".item");
-    let current = 0;
-    items.forEach((item, i) =>
-      item.addEventListener("click", () => {
-        if (container) {
-          if (i < current) {
-            container.className = "container right instant";
-            // @ts-ignore
-            reflow = container.offsetHeight;
-            container.className = `container left pos${i}`;
-          } else if (i > current) {
-            container.className = "container left instant";
-            // @ts-ignore
-            reflow = container.offsetHeight;
-            container.className = `container right pos${i}`;
-          }
-          current = i;
-        }
-      })
-    );
-  });
-
-  const links = [
-    { link: "About", name: "aboutPage" },
-    { link: "Heritage", name: "" },
-    { link: "Genealogy", name: "" },
-    { link: "Donate", name: "" },
-    { link: "Financials", name: "" },
-    { link: "Projects", name: "" },
-    { link: "Events", name: "" },
-  ];
-
-  const motionSettings = {
-    initial: { opacity: 0, y: -25 },
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-    exit: { opacity: 0, y: -25 },
-  };
+  const { links, goToLink, motionSettings } = NavbarViewModel();
 
   return (
     <motion.div {...motionSettings} className="container">
@@ -69,7 +17,7 @@ const Navbar = () => {
       </svg>
       <div className="menu">
         {links.map(({ link, name }, idx) => (
-          <div className="item" onClick={() => goToLink(name)}>
+          <div key={idx} className="item" onClick={() => goToLink(name)}>
             {link}
           </div>
         ))}

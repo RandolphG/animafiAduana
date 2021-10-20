@@ -4,6 +4,7 @@ import _ from "lodash";
 import { ScrollDownArrow } from "../../components";
 import { statements } from "./utils";
 import "./styles/_aboutPageStyles.scss";
+import { motion } from "framer-motion";
 
 const AboutPage = () => {
   let scrollSensitivitySetting: number = 30; //Increase/decrease this number to change sensitivity to trackpad gestures (up = less sensitive; down = more sensitive)
@@ -88,6 +89,20 @@ const AboutPage = () => {
       $currentSlide.removeClass("down-scroll").addClass("up-scroll");
     }
   });
+
+  const motionSettings = {
+    initial: { opacity: 0, scale: 0, y: -25 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.5,
+        ease: "easeInOut",
+      },
+    },
+    exit: { opacity: 0, y: -25 },
+  };
 
   return (
     <div className="container">

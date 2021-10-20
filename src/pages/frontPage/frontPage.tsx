@@ -113,8 +113,7 @@ const FrontPage: React.FC = () => {
   };
 
   return (
-    <motion.div
-      {...motionSettings}
+    <div
       className={classNames("slider", { "s--ready": slideState.sliderReady })}
     >
       <p className="slider__top-heading">
@@ -139,7 +138,7 @@ const FrontPage: React.FC = () => {
         className="slider__control slider__control--right"
         onClick={() => changeSlides(1)}
       />
-    </motion.div>
+    </div>
   );
 };
 

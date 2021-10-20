@@ -3,6 +3,7 @@
   font-family: 'operatorMonoBoldItalic';
   src: url("./fonts/operatorMono/OperatorMono-BoldItalic.woff") format("woff");
 }
+
 @font-face {
   font-family: "exoMediumItalic";
   src: url("./fonts/exo/Exo2-MediumItalic.woff") format("woff");
@@ -34,6 +35,8 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-family: $font-main;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {

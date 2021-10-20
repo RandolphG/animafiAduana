@@ -1,18 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans: 400,500,600");
-html,
-body {
+.loginFormContainer {
   align-items: center;
   display: flex;
   height: 100vh;
   justify-content: center;
   margin: auto;
-}
-
-body {
-  background: #f3f4f4;
-  font-family: "Work Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .box {

@@ -2,6 +2,7 @@ import React, { FC, Fragment } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Route, Switch, useLocation } from "react-router-dom";
 import { Logo, Navbar, Social } from "./components";
+import { ExpandableSidebarNavigation } from "./components/common/expandableSidebarNavigation";
 import { AboutPage, FrontPage, NotFound } from "./pages";
 
 /**
@@ -15,7 +16,10 @@ const App: FC = () => {
     <Fragment>
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
-          <Route path="/notfound">
+          <Route path="/">
+            <ExpandableSidebarNavigation />
+          </Route>
+          {/*<Route path="/404">
             <NotFound />
           </Route>
           <Route path="/aboutPage">
@@ -23,12 +27,12 @@ const App: FC = () => {
           </Route>
           <Route path="/">
             <FrontPage />
-          </Route>
+          </Route>*/}
         </Switch>
       </AnimatePresence>
-      <Logo />
-      <Navbar />
-      <Social />
+      {/*<Logo />*/}
+      {/*<Social />*/}
+      {/*<Navbar />*/}
     </Fragment>
   );
 };

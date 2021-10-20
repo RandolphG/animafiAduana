@@ -78,14 +78,4 @@ export const slides: slides = [
     country: "Info",
     img: images.image14,
   },
-  {
-    city: "Image15",
-    country: "Info",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image03.jpeg?raw=true",
-  },
-  {
-    city: "Image16",
-    country: "Info",
-    img: "https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_slideShowImages/_logoEmblem_edit.png?raw=true",
-  },
 ];
