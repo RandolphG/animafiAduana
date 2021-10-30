@@ -18,8 +18,10 @@ $letterStagger: 0.1s;
 
 .slider {
   overflow: hidden;
+  //overflow-y: scroll;
   position: relative;
   height: 100vh;
+  width: 100vw;
   color: #fff;
 
   @mixin sliderReady {

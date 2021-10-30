@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
 // ------------- MIXINS ------------- //
 @mixin transition($time, $property: all, $easing: ease-in) {
   transition: $property $time $easing;
@@ -26,6 +24,7 @@ $slide-number: 5;
   @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
 
   &:before {
+    overflow: hidden;
     content: "";
     position: absolute;
     width: 100%;
@@ -38,7 +37,7 @@ $slide-number: 5;
   }
 
   &:first-child {
-    background-image: url(https://i.postimg.cc/kXq9Qmnj/bgd1.jpg);
+    background-image: url(../../../assets/bgd1.jpg);
     transform: translateY(-$parallax-offset / 2);
 
     .content-wrapper {
@@ -47,19 +46,19 @@ $slide-number: 5;
   }
 
   &:nth-child(2) {
-    background-image: url(https://github.com/RandolphG/animafiAduana/blob/master/src/assets//_image_02.jpeg?raw=true);
+    background-image: url(../../../assets/_image_15.jpeg);
   }
 
   &:nth-child(3) {
-    background-image: url(https://github.com/RandolphG/animafiAduana/blob/master/src/assets//_image_01.jpeg?raw=true);
+    background-image: url(../../../assets/_image03.jpeg);
   }
 
   &:nth-child(4) {
-    background-image: url(https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image01.jpeg?raw=true);
+    background-image: url(../../../assets/_image04.jpeg);
   }
 
   &:nth-child(5) {
-    background-image: url(https://github.com/RandolphG/animafiAduana/blob/master/src/assets/_image08.jpeg?raw=true);
+    background-image: url(../../../assets/_image08.jpeg);
   }
 }
 
@@ -133,9 +132,6 @@ $slide-number: 5;
 
 .content-mission-statement {
   font-size: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding: 2rem 8rem 2rem 8rem;;
   line-height: 1.2;
 }

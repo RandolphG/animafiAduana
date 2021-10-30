@@ -1,8 +1,8 @@
+import { Login } from "./pages/loginPage";
 import { RootState } from "./state-mgmt/store";
 import { bindActionCreators, Dispatch, AnyAction } from "redux";
 import { connect } from "react-redux";
 import { requestLoginAction } from "./state-mgmt/store/system/slice";
-import Login from "./Login";
 
 const mapStateToProps = (state: RootState) => ({
   login: state.system,

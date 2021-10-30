@@ -7,9 +7,9 @@ import {
 } from "@material-ui/core/styles";
 import { TextField, Paper, Button, FormControl } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import logo from "./resources/platter.svg";
+import logo from "../../resources/platter.svg";
 import { useHistory } from "react-router-dom";
-import { ISystemState } from "./state-mgmt/store/system/types";
+import { ISystemState } from "../../state-mgmt/store/system/types";
 
 const ValidationTextField = withStyles({
   root: {

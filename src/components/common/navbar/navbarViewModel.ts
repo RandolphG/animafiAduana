@@ -10,7 +10,7 @@ export const NavbarViewModel = () => {
   }
 
   useEffect(() => {
-    const container: Element | null = document.querySelector(".container");
+    const container: HTMLElement | null = document.querySelector(".container");
     const items = document.querySelectorAll(".item");
     let current = 0;
     items.forEach((item, i) =>
@@ -18,12 +18,10 @@ export const NavbarViewModel = () => {
         if (container) {
           if (i < current) {
             container.className = "container right instant";
-            // @ts-ignore
             reflow = container.offsetHeight;
             container.className = `container left pos${i}`;
           } else if (i > current) {
             container.className = "container left instant";
-            // @ts-ignore
             reflow = container.offsetHeight;
             container.className = `container right pos${i}`;
           }
@@ -34,13 +32,13 @@ export const NavbarViewModel = () => {
   });
 
   const links = [
+    { link: "Home", name: "" },
     { link: "About", name: "aboutPage" },
     { link: "Heritage", name: "404" },
     { link: "Genealogy", name: "404" },
     { link: "Donate", name: "404" },
     { link: "Financials", name: "404" },
     { link: "Projects", name: "404" },
-    { link: "Events", name: "404" },
   ];
 
   const motionSettings = {

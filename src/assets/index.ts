@@ -12,6 +12,9 @@ import image11 from "./_image11.jpeg";
 import image12 from "./_image12.jpeg";
 import image13 from "./_image13.jpeg";
 import image14 from "./_image14.jpeg";
+import membersFemaleA from "./_IMAGE_MEMBERS_FEMALE_A.png";
+import membersFemaleB from "./_IMAGE_MEMBERS_FEMALE_B.png";
+import membersMaleA from "./_IMAGE_MEMBERS_MALE_A.png";
 
 export const images: any = {
   image01,
@@ -29,3 +32,5 @@ export const images: any = {
   image13,
   image14,
 };
+
+export const membersImages = { membersFemaleA, membersFemaleB, membersMaleA };

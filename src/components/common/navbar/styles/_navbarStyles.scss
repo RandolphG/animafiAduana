@@ -2,8 +2,7 @@
   color: white;
   overflow: hidden;
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  top: 0;
   padding-bottom: 20px;
   z-index: 1000;
 
@@ -81,6 +80,7 @@
 
 .item {
   font-size: 1.2rem;
+  text-transform: uppercase;
   align-items: center;
   cursor: pointer;
   display: flex;

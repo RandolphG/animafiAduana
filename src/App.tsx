@@ -16,10 +16,10 @@ const App: FC = () => {
     <Fragment>
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
-          <Route path="/">
+          {/*<Route path="/">
             <ExpandableSidebarNavigation />
-          </Route>
-          {/*<Route path="/404">
+          </Route>*/}
+          <Route path="/404">
             <NotFound />
           </Route>
           <Route path="/aboutPage">
@@ -27,12 +27,12 @@ const App: FC = () => {
           </Route>
           <Route path="/">
             <FrontPage />
-          </Route>*/}
+          </Route>
         </Switch>
       </AnimatePresence>
-      {/*<Logo />*/}
-      {/*<Social />*/}
-      {/*<Navbar />*/}
+      <Logo />
+      <Social />
+      <Navbar />
     </Fragment>
   );
 };
