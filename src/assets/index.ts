@@ -1,20 +1,20 @@
-import image01 from "./_image01.jpeg";
-import image02 from "./_image02.jpeg";
-import image03 from "./_image03.jpeg";
-import image04 from "./_image04.jpeg";
-import image05 from "./_image05.jpeg";
-import image06 from "./_image06.jpeg";
-import image07 from "./_image07.jpeg";
-import image08 from "./_image08.jpeg";
-import image09 from "./_image09.jpeg";
-import image10 from "./_image10.jpeg";
-import image11 from "./_image11.jpeg";
-import image12 from "./_image12.jpeg";
-import image13 from "./_image13.jpeg";
-import image14 from "./_image14.jpeg";
-import membersFemaleA from "./_IMAGE_MEMBERS_FEMALE_A.png";
-import membersFemaleB from "./_IMAGE_MEMBERS_FEMALE_B.png";
-import membersMaleA from "./_IMAGE_MEMBERS_MALE_A.png";
+import image01 from "./images/_image01.jpeg";
+import image02 from "./images/_image02.jpeg";
+import image03 from "./images/_image03.jpeg";
+import image04 from "./images/_image04.jpeg";
+import image05 from "./images/_image05.jpeg";
+import image06 from "./images/_image06.jpeg";
+import image07 from "./images/_image07.jpeg";
+import image08 from "./images/_image08.jpeg";
+import image09 from "./images/_image09.jpeg";
+import image10 from "./images/_image10.jpeg";
+import image11 from "./images/_image11.jpeg";
+import image12 from "./images/_image12.jpeg";
+import image13 from "./images/_image13.jpeg";
+import image14 from "./images/_image14.jpeg";
+import membersFemaleA from "./images/_IMAGE_MEMBERS_FEMALE_A.png";
+import membersFemaleB from "./images/_IMAGE_MEMBERS_FEMALE_B.png";
+import membersMaleA from "./images/_IMAGE_MEMBERS_MALE_A.png";
 
 export const images: any = {
   image01,
