@@ -16,10 +16,10 @@ const AppRouting: FC = () => {
       <Suspense fallback={<></>}>
         <Switch>
           <Route exact path="/app" render={renderRootRedirect} />
-          {appRoutes.map((route) => {
+          {appRoutes.map((route, idx) => {
             return (
               <Route
-                key={`route-${route.name}`}
+                key={`route-${route.name}-${idx}`}
                 exact
                 path={route.path}
                 component={route.component}

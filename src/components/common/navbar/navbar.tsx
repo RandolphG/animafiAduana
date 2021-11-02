@@ -21,7 +21,11 @@ const Navbar = () => {
       {Snake()}
       <div className="menu">
         {links.map(({ link, name }, idx) => (
-          <div key={idx} className="item" onClick={() => goToLink(name)}>
+          <div
+            key={`navbar-links-${idx}`}
+            className="item"
+            onClick={() => goToLink(name)}
+          >
             {link}
           </div>
         ))}

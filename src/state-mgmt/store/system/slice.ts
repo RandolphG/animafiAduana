@@ -8,7 +8,7 @@ const initState: ISystemState = {
   status: "",
   token: "",
   name: "",
-  showModal: false,
+  showModal: true,
   showSignInModal: false,
 };
 

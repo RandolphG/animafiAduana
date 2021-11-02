@@ -22,19 +22,17 @@ const CreditCardForm = () => {
           <div className="modal">
             <div className="modal__container">
               <Featured />
-              <AnimatePresence exitBeforeEnter>
-                <Switch location={location} key={location.key}>
-                  <Route path="/confirmation">
-                    <Confirmation />
-                  </Route>
-                  <Route path="/payment">
-                    <PaymentInfo />
-                  </Route>
-                  <Route path="/">
-                    <BasicInfo />
-                  </Route>
-                </Switch>
-              </AnimatePresence>
+              <Switch location={location} key={location.key}>
+                <Route path="/confirmation">
+                  <Confirmation />
+                </Route>
+                <Route path="/payment">
+                  <PaymentInfo />
+                </Route>
+                <Route path="/">
+                  <BasicInfo />
+                </Route>
+              </Switch>
             </div>
           </div>
         </div>

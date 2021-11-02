@@ -91,7 +91,7 @@ const Ticker = () => {
         <h2>Top Donors ☆</h2>
         <ul>
           {topDonors.map((donor: any, idx: number) => (
-            <li className="EventItem" key={idx}>
+            <li className="EventItem" key={`event-item-${idx}`}>
               <img
                 alt="news"
                 style={{ maxWidth: "100px", maxHeight: "50px" }}
@@ -122,7 +122,7 @@ const Ticker = () => {
             }}
           >
             {donators.map((donator: any, idx: number) => (
-              <li key={idx}>
+              <li key={`donators-${idx}`}>
                 <span className="eventDate">{donator.name}</span>
                 <span className="amount">{donator.amount}</span>
               </li>

@@ -21,7 +21,7 @@ const AboutPage = () => {
         </div>
       </section>
       {statements.map(({ title, text }, idx) => (
-        <section key={idx} className="background">
+        <section key={`statement-${idx}`} className="background">
           <div className="content-wrapper">
             {title && <p className="content-title">{title}</p>}
             <p className="content-mission-statement">{text}</p>
