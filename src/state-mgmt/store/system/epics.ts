@@ -1,16 +1,13 @@
 import { Epic } from "redux-observable";
 import { from, of, defer } from "rxjs";
 import { switchMap, filter, map, catchError } from "rxjs/operators";
-import { Action } from "../../../types";
+import { Action, RootState } from "../../../types";
 
 import {
   requestLoginAction,
   requestLoginSuccessAction,
-  requestCurrentUserActionSuccess,
   requestLoginActionFailure,
 } from "./slice";
-
-import { RootState } from "../index";
 
 // @ts-ignore
 import { Observable } from "rxjs/Observable";

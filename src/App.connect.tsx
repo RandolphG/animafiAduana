@@ -1,14 +1,14 @@
 import { Login } from "./pages/loginPage";
-import { RootState } from "./state-mgmt/store";
-import { bindActionCreators, Dispatch, AnyAction } from "redux";
+import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
-import { requestLoginAction } from "./state-mgmt/store/system/slice";
+import { requestLoginAction } from "./state-mgmt/store/";
+import { RootState } from "./types";
 
 const mapStateToProps = (state: RootState) => ({
   login: state.system,
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<AnyAction>) =>
+const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
     {
       doLogin: (username: string, password: string) =>

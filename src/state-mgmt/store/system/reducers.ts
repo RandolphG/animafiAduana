@@ -2,35 +2,56 @@ import { PayloadAction } from "@reduxjs/toolkit";
 import {
   ICurrentUser,
   IModalState,
+  ISignInModalState,
   ISystemState,
   IUserInput,
-} from "../../../types/types";
+} from "../../../types/";
 
 export const reducers = {
-  requestLoginAction: (state: any, action: PayloadAction<IUserInput>) => {},
+  requestLoginAction: (
+    state: ISystemState,
+    action: PayloadAction<IUserInput>
+  ) => {},
   requestLoginSuccessAction: (
-    state: any,
+    state: ISystemState,
     action: PayloadAction<ISystemState>
   ) => {
     const { admin, status, token } = action.payload;
-    state.admin = admin;
-    state.status = status;
-    state.token = token;
+
+    return {
+      ...state,
+      admin,
+      status,
+      token,
+    };
   },
   requestCurrentUserActionSuccess: (
-    state: any,
+    state: ISystemState,
     action: PayloadAction<ICurrentUser>
   ) => {
-    const name = action.payload.name;
-    state.name = name;
+    return { ...state, name: action.payload.name };
   },
-  requestLoginActionFailure: (state: any, action: PayloadAction<Error>) => {},
+  requestLoginActionFailure: (
+    state: ISystemState,
+    action: PayloadAction<Error>
+  ) => {},
   requestShowModalSuccess: (state: any, action: PayloadAction<IModalState>) => {
-    // state.showModal = action.payload.show;
     console.log(
       "requestShowModalSuccess : action payload",
       action.payload.show
     );
+
     return { ...state, showModal: action.payload.show };
+  },
+  requestShowSignInModalSuccess: (
+    state: ISystemState,
+    action: PayloadAction<ISignInModalState>
+  ) => {
+    console.log(
+      "requestShowSignInModalSuccess : action payload",
+      action.payload.show
+    );
+
+    return { ...state, showSignInModal: action.payload.show };
   },
 };

@@ -1,18 +1,32 @@
+import { RouterState } from "connected-react-router";
 import React, { FC, LazyExoticComponent } from "react";
 import { RouteComponentProps } from "react-router-dom";
+import { Reducer } from "redux";
 import { ActionType } from "typesafe-actions";
+import { History } from "history";
 import {
   requestCurrentUserActionSuccess,
   requestLoginAction,
+  requestLoginActionFailure,
   requestLoginSuccessAction,
+  rootReducer,
 } from "../state-mgmt/store";
+
+export interface IState {
+  system: ISystemState;
+  router: (
+    history: History<RouterState<ISystemState>>
+  ) => Reducer<RouterState<RouterState<ISystemState>>>;
+}
 
 export interface ISystemState {
   admin: Boolean;
   isLoggedIn: boolean;
   status: string;
   token: string;
+  showSignInModal: TShowSignInModal;
   showModal: TShowModal;
+  name: string;
 }
 
 export interface IUserInput {
@@ -25,6 +39,10 @@ export interface ICurrentUser {
 }
 
 export interface IModalState {
+  show: Boolean;
+}
+
+export interface ISignInModalState {
   show: Boolean;
 }
 
@@ -44,7 +62,7 @@ export interface CustomRoute {
 
 export type TShowModal = Boolean;
 
-export type SliceState = ISystemState & ICurrentUser;
+export type TShowSignInModal = Boolean;
 
 export type SourceActions =
   | typeof requestLoginAction
@@ -52,3 +70,15 @@ export type SourceActions =
   | typeof requestCurrentUserActionSuccess;
 
 export type Action = ActionType<SourceActions>;
+
+export type SystemActionsWithPayload =
+  | typeof requestLoginAction
+  | typeof requestLoginSuccessAction
+  | typeof requestCurrentUserActionSuccess
+  | typeof requestLoginActionFailure;
+
+export type SystemActions = ActionType<SystemActionsWithPayload>;
+
+export type finalActions = SystemActions;
+
+export type RootState = ReturnType<typeof rootReducer>;

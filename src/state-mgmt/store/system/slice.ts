@@ -1,19 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { reducers } from "./reducers";
-import { SliceState } from "../../../types/types";
+import { ISystemState } from "../../../types/";
 
-const initState: SliceState = {
+const initState: ISystemState = {
   admin: false,
   isLoggedIn: true,
   status: "",
   token: "",
   name: "",
   showModal: false,
+  showSignInModal: false,
 };
 
 export const systemSlice = createSlice({
   name: "system",
-  initialState: initState as SliceState,
+  initialState: initState as ISystemState,
   reducers,
 });
 
@@ -23,6 +24,7 @@ export const {
   requestCurrentUserActionSuccess,
   requestLoginActionFailure,
   requestShowModalSuccess,
+  requestShowSignInModalSuccess,
 } = systemSlice.actions;
 
 export default systemSlice.reducer;

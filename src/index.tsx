@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { store, history } from "./state-mgmt/store";
 import { Provider } from "react-redux";
 import { I18nextProvider } from "react-i18next";
-// @ts-ignore
 import { ConnectedRouter } from "connected-react-router";
 import Routes from "./routing";
 import i18next from "i18next";
