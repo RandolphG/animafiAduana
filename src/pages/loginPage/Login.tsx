@@ -9,7 +9,7 @@ import { TextField, Paper, Button, FormControl } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import logo from "../../resources/platter.svg";
 import { useHistory } from "react-router-dom";
-import { ISystemState } from "../../state-mgmt/store/system/types";
+import { ISystemState } from "../../types/types";
 
 const ValidationTextField = withStyles({
   root: {
@@ -85,7 +85,7 @@ const Login: React.FC<OwnProps> = (props: OwnProps) => {
   };
   const classes = useStyles();
   return (
-    <div className={classes.backgroundContainer}>
+    <div className={classes.backgroundContainer} key="login">
       <div className={classes.container}>
         <Paper className={classes.paper}>
           <div

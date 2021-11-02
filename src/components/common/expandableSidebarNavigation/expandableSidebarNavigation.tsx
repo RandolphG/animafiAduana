@@ -1,4 +1,5 @@
 import React, { FC, useRef } from "react";
+import { createPortal } from "react-dom";
 import { ExpandableSidebarNavigationViewModel } from "./expandableSidebarNavigationViewModel";
 import "./styles/_expandableSidebarNavigationStyles.scss";
 
@@ -238,17 +239,22 @@ const ExpandableSidebarNavigation: FC = () => {
   );
 
   return (
-    <div className="expandableSidebarNavigation">
-      <NavigationContainer>
-        <Trigger />
-        <div className="navigation">
-          <Header />
-          <Searchbar />
-          <Navigation />
-          <Logout />
-        </div>
-      </NavigationContainer>
-    </div>
+    <>
+      {createPortal(
+        <div className="expandableSidebarNavigation">
+          <NavigationContainer>
+            <Trigger />
+            <div className="navigation">
+              <Header />
+              <Searchbar />
+              <Navigation />
+              <Logout />
+            </div>
+          </NavigationContainer>
+        </div>,
+        document.body
+      )}
+    </>
   );
 };
 

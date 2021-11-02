@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
 
 $white: #ffffff;
-$body-background-color: #f4f4f8;
+$body-background-color: transparent;
 $navigation-background-color: #030303;
 $navigation-link-color: #9e9fa4;
 $navigation-link-hover-background-color: #313239;
@@ -14,13 +14,8 @@ $navigation-search-color: $white;
 $navigation-search-icon-size: 25px;
 $navigation-collapse-trigger-color: #408bff;
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 .expandableSidebarNavigation {
+  z-index: 1000;
   box-sizing: border-box;
   background-color: $body-background-color;
   font-family: "Noto Sans TC", sans-serif;
@@ -33,14 +28,18 @@ $navigation-collapse-trigger-color: #408bff;
   min-height: 700px;
 }
 
-// -------------- NAVIGATION CONTAINER
+/* -------------- NAVIGATION CONTAINER */
 
 .navigation-container {
-  position: relative;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
   width: 275px;
+  border: 1px solid white;
+
 }
 
-// -------------- NAVIGATION COLLAPSE TRIGGER
+/* -------------- NAVIGATION COLLAPSE TRIGGER */
 
 .navigation-collapse-trigger {
   bottom: 0;
@@ -51,7 +50,7 @@ $navigation-collapse-trigger-color: #408bff;
   $this: &;
   $navigation-collapse-trigger-orb-size: 25px;
 
-  // -------------- ORB
+  /* -------------- ORB */
 
   &__orb {
     position: absolute;
@@ -84,7 +83,7 @@ $navigation-collapse-trigger-color: #408bff;
     }
   }
 
-  // -------------- HOVER
+  /* -------------- HOVER */
 
   &:hover {
     #{$this}__orb {
@@ -97,12 +96,12 @@ $navigation-collapse-trigger-color: #408bff;
   }
 }
 
-// -------------- NAVIGATION
+/* -------------- NAVIGATION */
 
 .navigation {
   background-color: $navigation-background-color;
   color: $white;
-  height: 90vh;
+  height: 80vh;
   min-height: 650px;
   padding: 16px;
   display: flex;
@@ -134,7 +133,7 @@ $navigation-collapse-trigger-color: #408bff;
   }
 }
 
-// -------------- NAVIGATION LOGO
+/* -------------- NAVIGATION LOGO */
 
 .navigation-logo {
   color: $white;
@@ -155,7 +154,7 @@ $navigation-collapse-trigger-color: #408bff;
   }
 }
 
-// -------------- NAVIGATION SEARCH
+/* -------------- NAVIGATION SEARCH */
 
 .navigation-search {
   $offset: ($navigation-item-height - $navigation-search-icon-size) / 2;
@@ -163,7 +162,7 @@ $navigation-collapse-trigger-color: #408bff;
   position: relative;
   $this: &;
 
-  // -------------- ICON
+  /* -------------- ICON */
 
   &__icon {
     height: $navigation-search-icon-size;
@@ -181,7 +180,7 @@ $navigation-collapse-trigger-color: #408bff;
     }
   }
 
-  // -------------- INPUT
+  /* -------------- INPUT */
 
   &__input {
     background-color: $navigation-search-background-color;
@@ -199,7 +198,7 @@ $navigation-collapse-trigger-color: #408bff;
     position: relative;
     z-index: 1;
 
-    // -------------- CANCEL BUTTON
+    /* -------------- CANCEL BUTTON */
 
     &::-webkit-search-cancel-button {
       -webkit-appearance: none;
@@ -215,7 +214,7 @@ $navigation-collapse-trigger-color: #408bff;
       display: none;
     }
 
-    // -------------- FOCUS STYLES
+    /* -------------- FOCUS STYLES */
 
     &:focus {
       padding-left: $offset;
@@ -237,11 +236,11 @@ $navigation-collapse-trigger-color: #408bff;
   }
 }
 
-.navigationLinks{
+.navigationLinks {
   list-style: none;
 }
 
-// -------------- NAVIGATION LINK
+/* -------------- NAVIGATION LINK */
 
 .navigation-link {
   display: block;
@@ -264,7 +263,7 @@ $navigation-collapse-trigger-color: #408bff;
   &__name {
     margin-left: 12px;
 
-    // Collapsed state tooltip
+    /* Collapsed state tooltip */
 
     [class$="--collapsed"] & {
       padding: 0.5em;

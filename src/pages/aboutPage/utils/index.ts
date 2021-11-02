@@ -6,7 +6,7 @@ export const statements = [
       "            and sustainable development of Animafi Aduana people of Obo Kwahu in\n" +
       "            Ghana. Therefore, we strive to fund and create innovative,\n" +
       "            collaborative solutions for the urgently needed services and\n" +
-      "            restoration of facilities for the underprivileged people.",
+      "            restoration of Animafi Aduana Ancetral Compound with improved facilities to serve people.",
   },
   {
     text:

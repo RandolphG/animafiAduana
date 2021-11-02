@@ -17,6 +17,6 @@ const mapDispatchToProps = (dispatch: Dispatch<AnyAction>) =>
     dispatch
   );
 
-// Connector encasing for App component to redux state
-// This principal should be followed for all components needing to be attached to redux state
+/* Connector encasing for App component to redux state
+This principal should be followed for all components needing to be attached to redux state */
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

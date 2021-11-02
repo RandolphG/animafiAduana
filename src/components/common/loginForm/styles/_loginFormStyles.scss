@@ -1,7 +1,14 @@
+@import "src/theme/style";
+
 .loginFormContainer {
+  position: absolute;
+  top: 6rem;
+  right: 1rem;
+  z-index: 1000;
   align-items: center;
   display: flex;
-  height: 100vh;
+  height: fit-content;
+  width: fit-content;
   justify-content: center;
   margin: auto;
 }
@@ -9,11 +16,10 @@
 .box {
   background: #fff;
   border-radius: 0.625rem;
-  box-shadow: 0 0 40px 0 rgba(234, 76, 137, 0.6);
+  box-shadow: 0 0 40px 0 rgb(42, 39, 39);
   display: flex;
   flex-direction: column;
   height: 31.25rem;
-  position: absolute;
   width: 18.75rem;
 }
 
@@ -38,7 +44,7 @@ p {
 }
 
 .signin {
-  font: 600 1.8rem "Work Sans", sans-serif;
+  font: 600 1.8rem $font-main;
   padding: 0.17em;
 }
 
@@ -59,7 +65,7 @@ p {
 
 .signin-text {
   color: #9da3a5;
-  font: 500 0.85rem "Work Sans", sans-serif;
+  font: 500 0.85rem $font-main;
   margin: 0;
   padding-top: 0.625rem;
   text-align: center;
@@ -87,7 +93,7 @@ input {
   background: none;
   border: 0;
   border-bottom: 2px solid #9da3a5;
-  font: 500 0.9rem "Work Sans", sans-serif, sans-serif;
+  font: 500 0.9rem $font-main;
   height: 2.15em;
   margin-top: 0.7em;
   transition: all 0.15s ease-out;
@@ -96,7 +102,7 @@ input {
 }
 
 input:focus {
-  border-bottom: 2px solid #ea4c89;
+  border-bottom: 2px solid #2a2727;
   outline: none;
 }
 
@@ -117,11 +123,11 @@ input:focus {
 }
 
 button {
-  background: #ea4c89;
+  background: #2a2727;
   border: 0;
   border-radius: 1.4em;
   color: #fff;
-  font: 1.1rem "Work Sans", sans-serif;
+  font: 1.1rem $font-main;
   margin: 1.7em auto 0.6em;
   outline: none;
   padding: 0.6em;
@@ -141,7 +147,7 @@ button:focus {
 
 .foot-txt {
   color: #9da3a5;
-  font: 500 0.85rem "Work Sans", sans-serif;
+  font: 500 0.85rem $font-main;
   padding: 0.3em;
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/_membersStyles.scss";
-import { membersImages } from "../../../assets/";
+import { membersImages } from "../../../resources/";
 
 /**
  * Members

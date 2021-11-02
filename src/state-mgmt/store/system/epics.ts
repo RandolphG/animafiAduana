@@ -1,7 +1,7 @@
 import { Epic } from "redux-observable";
 import { from, of, defer } from "rxjs";
 import { switchMap, filter, map, catchError } from "rxjs/operators";
-import { ActionType } from "typesafe-actions";
+import { Action } from "../../../types";
 
 import {
   requestLoginAction,
@@ -16,12 +16,6 @@ import { RootState } from "../index";
 import { Observable } from "rxjs/Observable";
 
 import { doSomething } from "../../../services/api/api";
-
-type SourceActions =
-  | typeof requestLoginAction
-  | typeof requestLoginSuccessAction
-  | typeof requestCurrentUserActionSuccess;
-type Action = ActionType<SourceActions>;
 
 export const doLoginEpic: Epic<Action, Action, RootState> = (action$) =>
   /* @ts-ignore */

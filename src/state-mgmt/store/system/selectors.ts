@@ -1,21 +1,18 @@
 import { createSelector } from "reselect";
+import { SliceState } from "../../../types/types";
 
-export type TShowModal = Boolean;
+const selectSystemState = (state: SliceState) => {
+  console.log(`selector state`, state);
+  return state;
+};
 
-const selectSystemState = (state: any) => state;
+/* modal state */
+export const selectShowModal = createSelector(selectSystemState, (state) => {
+  return state.showModal;
+});
 
-/* return modal state */
-export const selectShowModal = createSelector(
+/* loggedIn state */
+export const getLoggedInState = createSelector(
   selectSystemState,
-  (state: any) => {
-    console.log(`selector state`, state);
-    return state.system.showModal;
-  }
+  (state) => state.isLoggedIn
 );
-
-/*
-export const selectShowModal = createSelector(
-  selectSystemState,
-  (state): TShowModal => state.showModal
-);
-*/

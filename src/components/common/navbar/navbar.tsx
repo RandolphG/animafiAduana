@@ -1,7 +1,7 @@
 import React from "react";
-import "./styles/_navbarStyles.scss";
 import { motion } from "framer-motion";
 import { NavbarViewModel } from "./navbarViewModel";
+import "./styles/_navbarStyles.scss";
 
 /**
  * Navigational bar
@@ -17,7 +17,7 @@ const Navbar = () => {
   );
 
   return (
-    <motion.div {...motionSettings} className="container">
+    <motion.div key="navbar" {...motionSettings} className="container">
       {Snake()}
       <div className="menu">
         {links.map(({ link, name }, idx) => (

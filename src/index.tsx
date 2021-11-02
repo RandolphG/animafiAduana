@@ -1,22 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./theme/_style.scss";
-import App from "./App";
 import { store, history } from "./state-mgmt/store";
 import { Provider } from "react-redux";
-import { BrowserRouter as Router } from "react-router-dom";
+import { I18nextProvider } from "react-i18next";
 // @ts-ignore
 import { ConnectedRouter } from "connected-react-router";
-import { AnimatePresence } from "framer-motion";
+import Routes from "./routing";
+import i18next from "i18next";
+import "./theme/_style.scss";
 
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Router>
-        <AnimatePresence exitBeforeEnter>
-          <App />
-        </AnimatePresence>
-      </Router>
+      <I18nextProvider i18n={i18next}>
+        <Routes />
+      </I18nextProvider>
     </ConnectedRouter>
   </Provider>,
   document.getElementById("root")

@@ -9,7 +9,7 @@ const AboutPage = () => {
   AboutPageViewModel();
 
   return (
-    <div className="container">
+    <div key="aboutPage" className="container">
       <section className="background">
         <div className="content-wrapper">
           <p className="content-title">

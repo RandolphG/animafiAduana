@@ -1,5 +1,5 @@
 import React from "react";
-// import "./styles/_loginFormStyles.scss";
+import "./styles/_loginFormStyles.scss";
 
 /**
  * Login Form
@@ -9,11 +9,11 @@ const LoginForm = () => {
   return (
     <div className="loginFormContainer">
       <div className="box">
-        {/*<img
+        <img
           className="logo"
           alt="dribble-logo"
           src="https://www.dropbox.com/s/vwcn548w1gsk7lb/dribbble-ball-icon.png?raw=1"
-        />*/}
+        />
         <p className="signin">Sign in</p>
         <p className="signin-text">
           Login with Twitter, Facebook,

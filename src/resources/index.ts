@@ -15,6 +15,7 @@ import image14 from "./images/_image14.jpeg";
 import membersFemaleA from "./images/_IMAGE_MEMBERS_FEMALE_A.png";
 import membersFemaleB from "./images/_IMAGE_MEMBERS_FEMALE_B.png";
 import membersMaleA from "./images/_IMAGE_MEMBERS_MALE_A.png";
+import image from "./avatar.webp";
 
 export const images: any = {
   image01,
@@ -34,3 +35,5 @@ export const images: any = {
 };
 
 export const membersImages = { membersFemaleA, membersFemaleB, membersMaleA };
+
+export const avatar = { image };

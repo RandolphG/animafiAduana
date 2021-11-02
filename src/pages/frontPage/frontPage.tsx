@@ -1,63 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { AUTOCHANGE_TIME, slides } from "./utils";
+import React, { FC } from "react";
+import { FrontPageViewModel } from "./frontPageViewModel";
+import { slides } from "./utils";
 import classNames from "classnames";
 import "./styles/_frontPageStyles.scss";
-import { motion } from "framer-motion";
-
-interface ISlideState {
-  activeSlide: number;
-  prevSlide: number;
-  sliderReady: boolean;
-}
 
 /**
  * Front Page
  */
-const FrontPage: React.FC = () => {
-  const IMAGE_PARTS: number = 4;
-  let changeTO: any = null;
-  const { length } = slides;
-
-  const [slideState, setSlideState] = useState<ISlideState>({
-    activeSlide: -1,
-    prevSlide: -1,
-    sliderReady: false,
-  });
-
-  /* auto change the images */
-  const runAutochangeTO = () => {
-    changeTO = setTimeout(() => {
-      changeSlides(1);
-      runAutochangeTO();
-    }, AUTOCHANGE_TIME);
-  };
-
-  /* change the slides */
-  const changeSlides = (change: number) => {
-    clearTimeout(changeTO);
-    const prevSlide: number = slideState.activeSlide;
-    let activeSlide: number = prevSlide + change;
-
-    if (activeSlide < 0) {
-      activeSlide = length - 1;
-    }
-
-    if (activeSlide >= length) {
-      activeSlide = 0;
-    }
-
-    setSlideState({ ...slideState, activeSlide, prevSlide });
-  };
-
-  useEffect(() => {
-    runAutochangeTO();
-    /*setTimeout(() => {
-      setSlideState({ ...slideState, activeSlide: 0, sliderReady: true });
-    }, 0);
-  */ return () => {
-      clearTimeout(changeTO);
-    };
-  });
+const FrontPage: FC = () => {
+  const { IMAGE_PARTS, slideState, changeSlides } = FrontPageViewModel();
 
   const partsOfImages = ({ slide }: any) => (
     <div className="slider__slide-parts">
@@ -86,18 +37,6 @@ const FrontPage: React.FC = () => {
     </div>
   );
 
-  const Slide = ({ slide, index, children }: any) => (
-    <div
-      className={classNames("slider__slide", {
-        "s--active": slideState.activeSlide === index,
-        "s--prev": slideState.prevSlide === index,
-      })}
-      key={slide.city}
-    >
-      {children}
-    </div>
-  );
-
   const motionSettings = {
     initial: { opacity: 0, scale: 0, y: -25 },
     animate: {
@@ -114,6 +53,7 @@ const FrontPage: React.FC = () => {
 
   return (
     <div
+      key="frontPage"
       className={classNames("slider", { "s--ready": slideState.sliderReady })}
     >
       <p className="slider__top-heading">

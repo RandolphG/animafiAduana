@@ -8,6 +8,7 @@ import "./styles/_socialStyles.scss";
 const Social = () => {
   return (
     <div
+      key="social"
       style={{
         background: "transparent",
         zIndex: 1000,

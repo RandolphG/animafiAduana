@@ -37,7 +37,7 @@ $slide-number: 5;
   }
 
   &:first-child {
-    background-image: url(../../../assets/bgd1.jpg);
+    background-image: url(../../../resources/bgd1.jpg);
     transform: translateY(-$parallax-offset / 2);
 
     .content-wrapper {
@@ -46,19 +46,19 @@ $slide-number: 5;
   }
 
   &:nth-child(2) {
-    background-image: url(../../../assets/images/_image_15.jpeg);
+    background-image: url(../../../resources/images/_image_15.jpeg);
   }
 
   &:nth-child(3) {
-    background-image: url(../../../assets/images/_image03.jpeg);
+    background-image: url(../../../resources/images/_image03.jpeg);
   }
 
   &:nth-child(4) {
-    background-image: url(../../../assets/images/_image04.jpeg);
+    background-image: url(../../../resources/images/_image04.jpeg);
   }
 
   &:nth-child(5) {
-    background-image: url(../../../assets/images/_image08.jpeg);
+    background-image: url(../../../resources/images/_image08.jpeg);
   }
 }
 

@@ -1,4 +1,4 @@
-import { images } from "../../../assets/";
+import { images } from "../../../resources/";
 
 type slides = { city: string; country: string; img: any }[];
 
