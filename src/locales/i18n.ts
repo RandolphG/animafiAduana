@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import translationsEN from "./locales/en/translations.json";
-import translationsKO from "./locales/ko/translations.json";
+import translationsGH from "./locales/gh/translations.json";
 
 i18n
   .use(initReactI18next)
@@ -10,12 +10,12 @@ i18n
       en: {
         translation: translationsEN,
       },
-      ko: {
-        translation: translationsKO,
+      gh: {
+        translation: translationsGH,
       },
     },
     lng: "en",
-    fallbackLng: "ko",
+    fallbackLng: "go",
     debug: true,
     detection: {
       order: ["queryString", "cookie"],
