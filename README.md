@@ -5,21 +5,12 @@ See the site :  [Animafi Aduana website](https://animafiaduanaorg.herokuapp.com/
 
 ![INTRO](assets/_preview.gif)
 
-### Features :
-- unique animations
-- Responsive SCSS
-- Framer motion
-- i18n Localization *todo
-- Typescript
-
 ### Technologies :
 - framer motion
-- SCSS Styles
+- SCSS 
 - React Router
 - i18n Localization *todo
-- Popmotion
 - Redux Toolkit
-- Threejs
 - TypeScript  
 - Redux-Observable
 
