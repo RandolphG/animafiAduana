@@ -1,20 +1,22 @@
-# Animafi Aduana Organization
+# *Animafi Aduana Development Organization*
 
-See the site :  [Animafi Aduana website](https://animafiaduanaorg.herokuapp.com/)
+[*Website*](https://animafiaduanaorg.herokuapp.com/)
 
 
 ![INTRO](assets/_preview.gif)
 
-### Technologies :
-- framer motion
-- SCSS 
-- React Router
-- i18n Localization *todo
-- Redux Toolkit
-- TypeScript  
-- Redux-Observable
+### *Technologies* :
+- [*Framer Motion*](https://framer.com/motion/)
+- [*SCSS*](https://sass-lang.com/) 
+- [*React Router*](https://reactrouter.com/)
+- [*i18n*](https://www.i18next.com/)
+- [*React 16.12*](https://reactjs.org/docs/hooks-intro.html)
+- [*Redux toolkit*](https://redux-toolkit.js.org/ )
+- [*Redux-Observable*](https://redux-observable.js.org/docs/basics/Epics.html)
+- [*TypeScript*]( https://microsoft.github.io/TypeScript-New-Handbook/chapters/basics/ )
+- [*RxJS*](https://rxjs-dev.firebaseapp.com/api)
 
-### Installation process :
+### *Installation process* :
 - clone repo
 - navigate to project root folder
 - install all dependencies with yarn or npm i
@@ -22,23 +24,14 @@ See the site :  [Animafi Aduana website](https://animafiaduanaorg.herokuapp.com/
 
 
 ```bash
-$ git clone https://github.com/RandolphG/Login-page.git
+$ git clone https://github.com/RandolphG/animafiAduana.git
 $ cd project folder
 $ yarn or npm i
 $ yarn start or npm start
 ```
 
-- Some Hurdles encountered during development where mostly focused around learning graphql on the client side.
-- Some time was spent getting the media queries correct as well as implementing some smooth animations.
 
-## Technical Stack
-- TypeScript ( https://microsoft.github.io/TypeScript-New-Handbook/chapters/basics/ )
-- React 16.12 ( https://reactjs.org/tutorial/tutorial.html, https://reactjs.org/docs/hooks-intro.html )
-- RxJS (https://rxjs-dev.firebaseapp.com/api)
-- redux-observable ( https://github.com/mitsuruog/react-redux-observable-typescript-sample, https://redux-observable.js.org/docs/basics/Epics.html )
-- Redux toolkit ( https://redux-toolkit.js.org/ )
-
-## State Management (Redux)
+## *State Management (Redux)*
 Application state is split mainly in three parts.
 - System
 - Properties
