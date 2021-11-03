@@ -14,17 +14,6 @@ module.exports = buildSchema(`
         email: String!
         password: String!
     }
-    
-    type CliffHanger {
-        _id:ID!
-        highScore:Int!
-        highScorePlayer: String!
-    }
-    
-    input CliffHangerInput {
-        highScore:Int!
-        highScorePlayer: String!
-    }
 
     type Login {    
         userName:String!
@@ -77,7 +66,6 @@ module.exports = buildSchema(`
     type Mutation {
         createArticle(article:ArticleInput): Article
         createUser(userInput:UserInput): User
-        setHighScore(cliffHangerInput:CliffHangerInput): CliffHanger
     }
 
     schema {
