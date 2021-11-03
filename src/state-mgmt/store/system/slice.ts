@@ -4,12 +4,14 @@ import { ISystemState } from "../../../types/";
 
 const initState: ISystemState = {
   admin: false,
-  isLoggedIn: true,
+  userName: "",
   status: "",
   token: "",
   name: "",
   showModal: true,
   showSignInModal: false,
+  isLoggedIn: true,
+  loggedInStatus: { userId: null, status: false, token: null },
 };
 
 export const systemSlice = createSlice({
@@ -25,6 +27,9 @@ export const {
   requestLoginActionFailure,
   requestShowModalSuccess,
   requestShowSignInModalSuccess,
+  requestSetName,
+  requestSetLogout,
+  requestSetLogin,
 } = systemSlice.actions;
 
 export default systemSlice.reducer;

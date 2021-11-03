@@ -6,7 +6,7 @@ import {
   Switch,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { LoginForm, Navbar, UserAvatar } from "../components";
+import { SignIn, Navbar, UserAvatar } from "../components";
 import { AboutPage, FrontPage } from "../pages";
 import { AppRouting, NonAuthRoute, NotFound, PrivateRoute } from "./components";
 
@@ -38,7 +38,7 @@ const AppRouter: FC = () => {
             />
             <Navbar />
             <UserAvatar />
-            <LoginForm />
+            <SignIn />
           </AnimatePresence>
         </Suspense>
       </Router>

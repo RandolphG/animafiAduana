@@ -1,5 +1,5 @@
 import { RouterState } from "connected-react-router";
-import React, { FC, LazyExoticComponent } from "react";
+import React, { ChangeEvent, FC, FormEvent, LazyExoticComponent } from "react";
 import { RouteComponentProps } from "react-router-dom";
 import { Reducer } from "redux";
 import { ActionType } from "typesafe-actions";
@@ -21,12 +21,20 @@ export interface IState {
 
 export interface ISystemState {
   admin: Boolean;
-  isLoggedIn: boolean;
   status: string;
   token: string;
-  showSignInModal: TShowSignInModal;
-  showModal: TShowModal;
   name: string;
+  userName: string;
+  showModal: TShowModal;
+  showSignInModal: TShowSignInModal;
+  isLoggedIn: boolean;
+  loggedInStatus: ILoggedInStatus;
+}
+
+export interface ILoggedInStatus {
+  userId: string | null;
+  status: boolean;
+  token: string | null;
 }
 
 export interface IUserInput {
@@ -38,8 +46,28 @@ export interface ICurrentUser {
   name: string;
 }
 
+export interface IInputField {
+  credentials: { userName: string; email: string; password: string };
+  handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  handleSubmit: (event: FormEvent<HTMLFormElement>) => void;
+  inputType: any;
+  showPassword: () => void;
+}
+
 export interface IModalState {
   show: Boolean;
+}
+
+export interface ILoggedInState {
+  isLoggedIn: boolean;
+}
+
+export interface ICredentialsState {
+  credentials: {
+    userName: string;
+    email: string;
+    password: string;
+  };
 }
 
 export interface ISignInModalState {
