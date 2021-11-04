@@ -9,7 +9,7 @@ import { NotFound } from "../notFound";
  */
 const AppRouting: FC = () => {
   /* redirect from app to "/app/frontpage" */
-  const renderRootRedirect = () => <Redirect to="/frontpage" />;
+  const renderRootRedirect = () => <Redirect to="/frontPage" />;
 
   return (
     <Fragment>

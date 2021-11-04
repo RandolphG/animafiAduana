@@ -22,7 +22,7 @@ const PrivateRoute: FC<IPrivateRoute> = ({ component: Component, ...rest }) => {
 
   const renderComponent = useCallback(
     (props) => {
-      return loggedIn ? <Component {...props} /> : <Redirect to="/frontpage" />;
+      return loggedIn ? <Component {...props} /> : <Redirect to="/frontPage" />;
     },
     [Component]
   );
