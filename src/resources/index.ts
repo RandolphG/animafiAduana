@@ -18,6 +18,9 @@ import membersMaleA from "./images/_IMAGE_MEMBERS_MALE_A.png";
 import image from "./images/avatar.webp";
 import logo from "./images/animafiAduana-logo.svg";
 import kwame from "./images/_kwameProfilePhoto.jpg";
+import apple from "./images/apple.svg";
+import warnerBros from "./images/warner-bros.svg";
+import pinterest from "./images/pinterest.svg";
 
 export const images: any = {
   image01,
@@ -43,3 +46,5 @@ export const avatar = { image };
 export const logoAnimafi = { logo };
 
 export const photos = { kwame };
+
+export const svg = { apple, pinterest, warnerBros };
