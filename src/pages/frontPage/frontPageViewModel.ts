@@ -12,6 +12,20 @@ export const FrontPageViewModel = () => {
   let changeTO: any = null;
   const { length } = slides;
 
+  const motionSettings = {
+    initial: { opacity: 0, scale: 0, y: -25 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+    exit: { opacity: 0, y: -25 },
+  };
+
   const [slideState, setSlideState] = useState<ISlideState>({
     activeSlide: -1,
     prevSlide: -1,

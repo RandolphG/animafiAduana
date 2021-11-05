@@ -5,3 +5,4 @@ export * from "./logo";
 export * from "./scrollDownArrow";
 export * from "./signIn";
 export * from "./userAvatar";
+export * from "./cookieStorage";

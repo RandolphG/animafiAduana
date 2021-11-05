@@ -1,21 +1,21 @@
 redux-observable TypeError: Cannot read property 'type' of undefined
 	https://stackoverflow.com/questions/48746217/redux-observable-typeerror-cannot-read-property-type-of-undefined
 
-reduxObservable.js Uncaught TypeError: Cannot read property 'subscribe' of undefined #64	
+reduxObservable.js Uncaught TypeError: Cannot read property 'subscribe' of undefined #64
 	https://github.com/redux-observable/redux-observable/issues/64
 
 How to use Reselect with nested selector calls
 	https://stackoverflow.com/questions/58175055/how-to-use-reselect-with-nested-selector-calls
-	
+
 GSAP + React, First Steps & Handy Techniques.
 	https://greensock.com/react/
-	
+
 Creating GSAP Timeline with React Project
 	https://greensock.com/forums/topic/21100-creating-gsap-timeline-with-react-project/
 
 The Best React State Management Tools for Enterprise Applications
 	https://www.toptal.com/react/react-state-management-tools-enterprise
-	
+
 CODEPEN -->
 	Brightness Setting
 		https://codepen.io/joshbivens/pen/BWramj
@@ -57,9 +57,9 @@ CODEPEN -->
 		https://codepen.io/winkerVSbecks/pen/RvygBv
 	RxJs | Body Mass Index Calculator
 		https://codepen.io/SimonNonnis/pen/RWLYjP
-		
+
 	PENS TAGGED
-		dribbble	
+		dribbble
 		https://codepen.io/tag/dribbble?cursor=ZD0xJm89MCZwPTEx
 	Animated folder micro-interaction
 		https://codepen.io/NielsVoogt/details/dyGpNOx
@@ -69,23 +69,25 @@ CODEPEN -->
 		https://codepen.io/maggie5f48fcccbd/details/zYNEEgL
 	OWLEE Social Media Concept (Dribbble to CodePen #1)
 		https://codepen.io/P42s/details/vYXONBr
-	Loader with Anime.js	
+	Loader with Anime.js
 		https://codepen.io/NielsVoogt/pen/wOOeag
 
-		
+
 DRIBBBLE -->
 	https://
-	
+
 	Animated Download Icon : https://codepen.io/Zaku/pen/wvMVmKm
 
 Full Page Parallax Scroll Effect : https://codepen.io/eehayman/pen/qdGZJr
 
 MOTION BLUR MOUSE CURSOR : https://codepen.io/igcorreia/pen/pJvOpL
 
-FAMILTY TREE : 
+FAMILTY TREE :
 
 	★ Familia : https://codepen.io/ancara/pen/yGaOQd
-	
+
 	★ Family Tree : https://codepen.io/aarati/details/bdyVEP
-	
+
 	★ Simpson Family Tree : https://codepen.io/zingchart/details/bzeRWWdribbble.com/tags/codepen
+
+WEBSITE INSPIRATIONS : http://opencontinents.com/about/?stars=1

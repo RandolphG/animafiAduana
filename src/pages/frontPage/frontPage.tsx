@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { CookieStorage } from "../../components";
 import { FrontPageViewModel } from "./frontPageViewModel";
 import { slides } from "./utils";
 import classNames from "classnames";
@@ -36,20 +37,6 @@ const FrontPage: FC = () => {
       <p className="slider__slide-readmore">read more</p>
     </div>
   );
-
-  const motionSettings = {
-    initial: { opacity: 0, scale: 0, y: -25 },
-    animate: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-    exit: { opacity: 0, y: -25 },
-  };
 
   return (
     <div

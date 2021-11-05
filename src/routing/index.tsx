@@ -6,7 +6,7 @@ import {
   Switch,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { SignIn, Navbar, UserAvatar } from "../components";
+import { SignIn, Navbar, UserAvatar, CookieStorage } from "../components";
 import { DashboardPage, AboutPage, FrontPage } from "../pages";
 import { AppRouting, NonAuthRoute, NotFound, PrivateRoute } from "./components";
 
@@ -44,6 +44,7 @@ const AppRouter: FC = () => {
             {/*<Navbar />*/}
             {/*<UserAvatar />*/}
             {/*<SignIn />*/}
+            <CookieStorage />
           </AnimatePresence>
         </Suspense>
       </Router>
