@@ -17,7 +17,9 @@ const SignIn = () => {
 
   const [signUp, setSignUp] = useState(true);
 
-  const SigninButton = () => <button>{signUp ? `Sign In` : `Sign Up`}</button>;
+  const SigninButton = () => (
+    <button className=".signInButton">{signUp ? `Sign In` : `Sign Up`}</button>
+  );
 
   const UserName = () => (
     <input

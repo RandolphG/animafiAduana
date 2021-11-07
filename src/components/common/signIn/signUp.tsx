@@ -17,7 +17,7 @@ const SignUp: FC = () => {
     showPassword,
   } = SignUpViewModel();
 
-  const SigninButton = () => <button>Sign Up</button>;
+  const SigninButton = () => <button className=".signInButton">Sign Up</button>;
 
   const UserName = () => (
     <input

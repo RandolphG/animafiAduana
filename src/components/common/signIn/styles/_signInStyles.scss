@@ -122,7 +122,7 @@ input:focus {
   color: #9da3a5;
 }
 
-button {
+.signInButton {
   background: #2a2727;
   border: 0;
   border-radius: 1.4em;
@@ -136,12 +136,12 @@ button {
   width: 80%;
 }
 
-button:hover {
+.signInButton:hover {
   background: #444;
   cursor: pointer;
 }
 
-button:focus {
+.signInButton:focus {
   outline: none;
 }
 

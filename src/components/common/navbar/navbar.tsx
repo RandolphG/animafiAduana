@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <motion.div key="navbar" {...motionSettings} className="container">
       {Snake()}
-      <div className="menu">
+      <div className="navbarMenu">
         {links.map(({ link, name }, idx) => (
           <div
             key={`navbar-links-${idx}`}
