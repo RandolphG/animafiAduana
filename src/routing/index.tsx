@@ -13,7 +13,15 @@ import {
   CookieStorage,
   ContextMenu,
 } from "../components";
-import { DashboardPage, AboutPage, FrontPage } from "../pages";
+import {
+  DashboardPage,
+  AboutPage,
+  FrontPage,
+  BoardMembersPage,
+  Scrollspy,
+  Heritage,
+} from "../pages";
+import HeritagePage from "../pages/heritagePage/heritagePage";
 import { AppRouting, NonAuthRoute, NotFound, PrivateRoute } from "./components";
 
 /**
@@ -35,6 +43,13 @@ const AppRouter: FC = () => {
                   <Route exact path="/" component={renderRootRedirect} />
                   <PrivateRoute path="/app" component={AppRouting} />
                   <Route path="/non-auth" component={NonAuthRoute} />
+                  <Route exact path="/heritage" component={Heritage} />
+                  <Route exact path="/heritagePage" component={HeritagePage} />
+                  <Route
+                    exact
+                    path="/boardMembersPage"
+                    component={BoardMembersPage}
+                  />
                   <Route exact path="/contextMenu" component={ContextMenu} />
                   <Route
                     exact
@@ -48,10 +63,10 @@ const AppRouter: FC = () => {
                 </Switch>
               )}
             />
-            {/*<Navbar />*/}
+            <Navbar />
             {/*<UserAvatar />*/}
             {/*<SignIn />*/}
-            <CookieStorage />
+            {/*<CookieStorage />*/}
           </AnimatePresence>
         </Suspense>
       </Router>

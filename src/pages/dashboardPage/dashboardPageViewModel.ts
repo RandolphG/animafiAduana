@@ -27,7 +27,7 @@ export const DashboardPageViewModel = () => {
 
   const transfers = [
     {
-      label: "Apple Inc.",
+      label: "Kwame Frimpong",
       subLabel: "Apple ID Payment",
       date: "28 Oct. 21",
       alt: "apple",
@@ -36,7 +36,7 @@ export const DashboardPageViewModel = () => {
       amount: "- $ 550",
     },
     {
-      label: "Pinterest",
+      label: "Akua Frimpong",
       subLabel: "2 year subscription",
       date: "26 Oct. 31",
       alt: "pinterest",
@@ -45,8 +45,8 @@ export const DashboardPageViewModel = () => {
       amount: "- $ 150",
     },
     {
-      label: "Warner Bros",
-      subLabel: "Cinema",
+      label: "Randolph Gordon",
+      subLabel: "Donation",
       date: "26 Oct. 31",
       alt: "pinterest",
       svg: svg.warnerBros,

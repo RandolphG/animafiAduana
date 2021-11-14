@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from "react";
-import "./styles/_signInStyles.scss";
 import { useSelector } from "react-redux";
 import { getSignInModalState } from "../../../state-mgmt/store";
 import { motion } from "framer-motion";
 import { SignInViewModel } from "./signInViewModel";
+import "./styles/_signInStyles.scss";
 
 /**
  * Login Form
@@ -18,7 +18,7 @@ const SignIn = () => {
   const [signUp, setSignUp] = useState(true);
 
   const SigninButton = () => (
-    <button className=".signInButton">{signUp ? `Sign In` : `Sign Up`}</button>
+    <button className="signInButton">{signUp ? `Sign In` : `Sign Up`}</button>
   );
 
   const UserName = () => (
@@ -95,19 +95,17 @@ const SignIn = () => {
     <Fragment>
       {show && (
         <motion.div {...motionSettings} className="loginFormContainer">
-          <form className="form" onSubmit={handleSubmit}>
-            <div className="box">
-              <LogoImage />
-              <p className="signin">Sign in</p>
-              {signUp ? <SocialSignIn /> : null}
-              <div className="signin-row" />
-              <UserName />
-              <br />
-              <Password />
-              <SigninButton />
-              {signUp ? <Footer /> : null}
-            </div>
-          </form>
+          <div className="box">
+            <LogoImage />
+            <p className="signin">Sign in</p>
+            {signUp ? <SocialSignIn /> : null}
+            <div className="signin-row" />
+            <UserName />
+            <br />
+            <Password />
+            <SigninButton />
+            {signUp ? <Footer /> : null}
+          </div>
         </motion.div>
       )}
     </Fragment>

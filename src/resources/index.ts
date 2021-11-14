@@ -21,6 +21,8 @@ import kwame from "./images/_kwameProfilePhoto.jpg";
 import apple from "./images/apple.svg";
 import warnerBros from "./images/warner-bros.svg";
 import pinterest from "./images/pinterest.svg";
+import teamImage from "./images/teamImage.png";
+import dummyImage from "./images/dummyImage.png";
 
 export const images: any = {
   image01,
@@ -45,6 +47,6 @@ export const avatar = { image };
 
 export const logoAnimafi = { logo };
 
-export const photos = { kwame };
+export const photos = { kwame, teamImage, dummyImage };
 
 export const svg = { apple, pinterest, warnerBros };

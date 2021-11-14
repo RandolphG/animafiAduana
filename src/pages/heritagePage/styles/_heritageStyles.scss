@@ -1,0 +1,125 @@
+#main {
+  color: white;
+  width: 100%;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main:hover {
+  .scrollSpyContainer {
+    background: #ee7752;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+.scrollSpyContainer {
+  z-index: 1000;
+  display: block;
+  right: 12px;
+  top: 1rem;
+  position: fixed;
+  background-color: white;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  max-height: 600px;
+}
+
+.textSection {
+  border: 2px solid white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7.5rem;
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
+}
+
+.spyItemClass {
+  color: tomato;
+  padding: 4px;
+
+}
+
+.spyItemClass:hover {
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bold;
+  color: black
+}
+
+.heritageText {
+  color: white;
+}
+
+#One {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+#Two {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+
+}
+
+#Three {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+
+}
+
+#Four {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+
+}
+
+#Five {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+
+}
+
+#Six {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+
+}
+
+#Seven {
+  font-size: 1.2rem;
+}
+
+.ourMessage{
+  color: white;
+  margin-top: 1rem;
+}
