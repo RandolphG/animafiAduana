@@ -36,7 +36,7 @@ export const NavbarViewModel = () => {
     { link: "About", name: "aboutPage" },
     { link: "Heritage", name: "heritage" },
     { link: "Genealogy", name: "404" },
-    { link: "Donate", name: "404" },
+    { link: "Donate", name: "donationPage" },
     { link: "Financials", name: "404" },
     { link: "Projects", name: "404" },
   ];

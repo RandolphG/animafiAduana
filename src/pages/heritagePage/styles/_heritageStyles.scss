@@ -30,11 +30,10 @@ ul li {
 }
 
 img {
-  max-height: 600px;
+  max-height: 900px;
 }
 
 .textSection {
-  border: 2px solid white;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -42,6 +41,43 @@ img {
   justify-content: center;
   align-items: center;
   margin-bottom: 7.5rem;
+
+  &__container {
+    position: relative;
+
+    &_content {
+      position: absolute;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &_span {
+
+        &_header {
+          color: green;
+          font-size: 2rem;
+          text-shadow: 1px 1px rgba(0,0,0,0.5);
+          font-weight: 600;
+        }
+
+        &_heritageText {
+          color: green;
+          text-shadow: 1px 1px rgba(0,0,0,0.5);
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    &_image {
+      width: 100%;
+
+      &_element {
+        width: 100vw;
+        object-fit: cover
+      }
+    }
+  }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
@@ -76,50 +112,40 @@ img {
   color: black
 }
 
-.heritageText {
-  color: white;
-}
-
 #One {
-  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
 #Two {
-  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 
 }
 
 #Three {
-  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 
 }
 
 #Four {
-  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 
 }
 
 #Five {
-  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 
 }
 
 #Six {
-  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 
 }
 
 #Seven {
-  font-size: 1.2rem;
 }
 
-.ourMessage{
-  color: white;
+.ourMessage {
+  font-size: 1.8rem;
+  color: green;
   margin-top: 1rem;
 }

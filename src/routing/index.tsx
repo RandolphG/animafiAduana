@@ -20,6 +20,7 @@ import {
   BoardMembersPage,
   Scrollspy,
   Heritage,
+  DonationPage,
 } from "../pages";
 import HeritagePage from "../pages/heritagePage/heritagePage";
 import { AppRouting, NonAuthRoute, NotFound, PrivateRoute } from "./components";
@@ -44,6 +45,7 @@ const AppRouter: FC = () => {
                   <PrivateRoute path="/app" component={AppRouting} />
                   <Route path="/non-auth" component={NonAuthRoute} />
                   <Route exact path="/heritage" component={Heritage} />
+                  <Route exact path="/donationPage" component={DonationPage} />
                   <Route exact path="/heritagePage" component={HeritagePage} />
                   <Route
                     exact
