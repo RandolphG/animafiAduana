@@ -12,17 +12,15 @@ import image11 from "./images/_image11.jpeg";
 import image12 from "./images/_image12.jpeg";
 import image13 from "./images/_image13.jpeg";
 import image14 from "./images/_image14.jpeg";
-import membersFemaleA from "./images/_IMAGE_MEMBERS_FEMALE_A.png";
-import membersFemaleB from "./images/_IMAGE_MEMBERS_FEMALE_B.png";
-import membersMaleA from "./images/_IMAGE_MEMBERS_MALE_A.png";
 import image from "./images/avatar.webp";
 import logo from "./images/animafiAduana-logo.svg";
 import kwame from "./images/_kwameProfilePhoto.jpg";
 import apple from "./images/apple.svg";
 import warnerBros from "./images/warner-bros.svg";
 import pinterest from "./images/pinterest.svg";
-import teamImage from "./images/teamImage.png";
 import dummyImage from "./images/dummyImage.png";
+import donorboxImage from "./images/donorbox_logo.png";
+import paypalImage from "./images/Paypal.svg";
 
 export const images: any = {
   image01,
@@ -39,14 +37,14 @@ export const images: any = {
   image12,
   image13,
   image14,
+  donorboxImage,
+  paypalImage,
 };
-
-export const membersImages = { membersFemaleA, membersFemaleB, membersMaleA };
 
 export const avatar = { image };
 
 export const logoAnimafi = { logo };
 
-export const photos = { kwame, teamImage, dummyImage };
+export const photos = { kwame, dummyImage };
 
 export const svg = { apple, pinterest, warnerBros };

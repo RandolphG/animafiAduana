@@ -1,7 +1,6 @@
 import React from "react";
 import { ScrollDownArrow } from "../../components";
 import { AboutPageViewModel } from "./aboutPageViewModel";
-import Members from "./members/members";
 import { statements } from "./utils";
 import "./styles/_aboutPageStyles.scss";
 
@@ -31,14 +30,6 @@ const AboutPage = () => {
           </div>
         </section>
       ))}
-      <section className="background">
-        <div className="content-wrapper">
-          <Members />
-          <p className="content-subtitle">
-            <ScrollDownArrow />
-          </p>
-        </div>
-      </section>
     </div>
   );
 };

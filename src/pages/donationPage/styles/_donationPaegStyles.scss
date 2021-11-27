@@ -1,0 +1,42 @@
+.donation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__donorBox {
+    max-width: 500px;
+    min-width: 250px;
+    max-height: none !important
+  }
+
+
+}
+
+#donorButton {
+  background: #41a2d8 url(https://donorbox.org/images/red_logo.png) no-repeat 37px;
+  color: #fff;
+  text-decoration: none;
+  font-family: Verdana, sans-serif;
+  display: inline-block;
+  font-size: 16px;
+  padding: 15px 38px;
+  padding-left: 75px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 #1f5a89;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  &_textImage{
+    display: flex;
+    flex-direction: row;
+    background: black;
+  }
+}
