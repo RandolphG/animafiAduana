@@ -1,4 +1,6 @@
 .donation {
+  box-sizing: border-box;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   display: flex;
@@ -34,9 +36,37 @@
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  &_textImage{
+
+  &_textImage {
     display: flex;
     flex-direction: row;
     background: black;
   }
+}
+
+.donateContainer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  font-size: 2rem;
+  color: white;
+}
+
+.paypalButtonContainer {
+  box-sizing: border-box;
+  border: 2px solid white;
+  margin-left: 1rem;
+  padding: 1rem 4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #41a2d8;
 }
